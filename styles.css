@@ -1,0 +1,195 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background: url('images/kochamkaroleblur.png') center/cover no-repeat;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#menuTrigger {
+    cursor: pointer;
+    /* Display: none; No need to hide it initially */
+}
+
+#menuTrigger img {
+    width: 24px;
+}
+
+#menuBar {
+    display: flex;
+}
+
+#menuBar a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#menuBar a:hover {
+    color: #e74c3c; /* Change text color on hover */
+}
+
+#homeIcon {
+    width: 24px; /* Set the width of the icon as needed */
+    transition: filter 0.3s ease-in-out; /* Transition effect for the filter property */
+}
+
+#countdownContainer {
+    font-size: 24px;
+    text-align: center;
+    max-width: 80%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 10vh;
+}
+
+.dayNumber {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#countdownLabel {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#countdownText {
+    color: #000;
+    font-weight: normal;
+}
+#informacjaTextContainer {
+    position:absolute;
+    top:25vh;
+    width: fit-content;
+    font-size: 24px;
+    text-align: center;
+    max-width: 80%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+#previousTexts {
+    position: absolute;
+    top: 25vh;
+    width:fit-content;
+}
+
+.headerText {
+    font-size: 32px;
+    text-align: center;
+    max-width: 80%;
+    padding: 10px;
+    color: #e74c3c;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+#todayText {
+    position: absolute;
+    top: 25vh;
+}
+
+.todayTextContainer {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #000; 
+    width: fit-content;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    max-width: 50%;
+}
+
+.textContainer {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #000; 
+    max-width: 50%;
+}
+
+.innerTextContainer {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: left;
+    padding: 10px;
+}
+
+.dayNumber {
+    text-align: left;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    #menuBar {
+        display: none; /* Hide by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust as needed based on your header height */
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.8);
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    #menuBar.show {
+        display: flex; /* Show when the class 'show' is applied */
+    }
+
+    #menuBar a {
+        margin: 10px 0;
+    }
+    #informacjaTextContainer {   
+        font-size: 16px;
+    }
+    .headerText {
+        font-size: 22px;
+    }
+    .textContainer {
+        font-size: 16px;
+        margin: 30px;
+        min-width: fit-content;
+    }
+    .todayTextContainer {
+        font-size:16px;
+        min-width: fit-content;
+    }
+    .innerTextContainer {
+        font-size: 16px;
+        min-width: fit-content;
+    }
+    #countdownContainer {
+        font-size: 16px;
+    }
+}
